@@ -33,11 +33,14 @@ echo "Copying edited wiki"
 cp -R "$TEMP_WIKI_DIR/.git" "$WIKI_DIR/"
 
 echo "Checking if wiki has changes"
-echo "cd $WIKI_DIR"
+echo ">>> cd $WIKI_DIR"
 cd "$WIKI_DIR"
 
-echo "ls ."
+echo ">>> ls ."
 ls .
+
+echo ">>> pwd"
+pwd
 
 git config user.name  "[bot] ${GITHUB_ACTOR}"
 git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
